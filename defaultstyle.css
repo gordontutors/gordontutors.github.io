@@ -21,6 +21,9 @@ padding-right: 10%;
 .twobox{
   display:flex;
   justify-content:space-around;
+  border: 1px solid grey;
+  margin: 5px;
+  
 }
 
 .twobox .imgicon{
