@@ -18,6 +18,11 @@ padding-right: 10%;
   text-decoration-style: dotted;
 }
 
+.clickicons{
+  max-height: 40px;
+  max-width: 80px;
+}
+
 .twobox{
   display:flex;
   justify-content:space-around;
