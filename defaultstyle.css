@@ -1,0 +1,175 @@
+body{
+  font-family: Verdana;
+  font-size: 16px;
+}
+
+.content{
+width: 70%;
+margin-left: 5%;
+margin-right: 5%;
+padding-bottom: 35px;
+padding-right: 10%;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration-style: dotted;
+}
+
+.pagenav{
+  display:flex;
+  justify-content: space-around;
+}
+
+.prevbutton{
+  border-radius: 50% 10px 10px 50%;
+  background-color: #99ccff;
+  padding: 18px;
+  color:black;
+}
+
+.nextbutton{
+  border-radius: 10px 50% 50% 10px;
+  background-color: #99ccff;
+  padding: 18px;
+  color: black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #ACD5F1;
+  text-align: center;
+  border-radius: 10px;
+  width: 240px;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 4px;
+  font-weight: normal;
+  position: absolute;
+  right:-50%;
+  top: 20px;
+  z-index: 1;
+
+}
+
+h2{
+  font-size: 20px;
+}
+
+.splitcontent{
+  display:flex;
+}
+
+.leftmenu{
+  background-color:  #85adad;
+  width: 250px;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.lrdiv{
+  display:flex;
+  justify-content:space-around;
+}
+
+.lrimg{
+  max-width: 400px;
+  object-fit: contain;
+}
+
+.ftdiv{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding: 10px;
+}
+
+.ftdiv .ftimg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: auto;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+header{
+  font-size: 36px;
+  font-weight:bold;
+  padding-top: 45px;
+}
+
+.logo{
+  height:100%;
+}
+
+.topbar{
+  width: 98%;
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 48px;
+  padding: 18px;
+  position: relative;
+  border: 2px solid black;
+  text-align: center;
+  align-items: center;
+}
+
+.headbutton{
+  width: 126px
+}
+
+p{
+  line-height:1.8;
+}
+
+h1{
+  padding-top: 20px;
+}
+
+footer{
+  border-top: 2px solid black;
+  background-color:#99b3ff;
+  width:100%;
+  padding: 3px;
+}
+
+.footerbutton-container{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-evenly;
+  margin: 25px 20px 50px 20px;
+}
+
+.footerbutton{
+ border-radius: 10px;
+ color: black;
+ padding: 12px;
+ text-decoration:underline;
+}
+
+/* from StackOverflow: https://stackoverflow.com/questions/7525977/how-to-write-fraction-value-using-html */
+.frac {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;
+}
+.frac > span {
+    display: block;
+    padding: 0.1em;
+}
+.frac span.bottom {
+    border-top: thin solid black;
+}
+.frac span.symbol {
+    display: none;
+}
