@@ -18,6 +18,16 @@ padding-right: 10%;
   text-decoration-style: dotted;
 }
 
+.twobox{
+  display:flex;
+  justify-content:space-around;
+}
+
+.twobox .imgicon{
+  width:45%;
+  padding: 10em;
+}
+
 .pagenav{
   display:flex;
   justify-content: space-around;
