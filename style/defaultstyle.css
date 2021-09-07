@@ -76,6 +76,7 @@ h2{
 
 .splitcontent{
   display:flex;
+  margin: 0;
 }
 
 .leftmenu{
