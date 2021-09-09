@@ -5,7 +5,10 @@ body{
 
 .content{
   padding-bottom: 35px;
-  padding-right:25%;
+  padding-right:15%;
+  width:100%;
+  display:flex;
+  justify-content: space-evenly;
   background-color: #d6d6d6;
 }
 
