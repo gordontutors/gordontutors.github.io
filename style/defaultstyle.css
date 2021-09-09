@@ -22,6 +22,8 @@ body{
 .clickicons{
   max-height: 40px;
   max-width: 80px;
+  justify-content: center;
+  align-items: center;
 }
 
 .twobox{
