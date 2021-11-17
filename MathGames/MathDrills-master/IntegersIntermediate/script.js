@@ -130,8 +130,8 @@ function resetGame() {
 
 function randomizeNumbers() {
   //increaseScore();
-  const firstRand = parseInt(Math.random() * 9 + 1);
-  const secondRand = parseInt(Math.random() * 19 + 1);
+  const firstRand = parseInt(Math.random() * 9 + 2);
+  const secondRand = parseInt(Math.random() * 14 + 2);
   document.getElementById('firstNumber').innerHTML = firstRand;
   document.getElementById('secondNumber').innerHTML = secondRand;
   firstNumber = firstRand;
