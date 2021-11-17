@@ -131,7 +131,7 @@ function resetGame() {
 function randomizeNumbers() {
   //increaseScore();
   const firstRand = parseInt(Math.random() * 17 + 3);
-  const secondRand = parseInt(Math.random() * 17 + 3);
+  const secondRand = parseInt(Math.random() * 11 + 3);
   document.getElementById('firstNumber').innerHTML = firstRand;
   document.getElementById('secondNumber').innerHTML = secondRand;
   firstNumber = firstRand;
