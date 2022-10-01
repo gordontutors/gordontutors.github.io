@@ -128,7 +128,7 @@ function gameOver() {
 }
 
 function resetGame() {
-  document.getElementById("timerCount").innerHTML = 60;
+  timeleft = 30;
   resetTimer();
   resetGuess();
   randomizeNumbers();
