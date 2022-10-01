@@ -6,21 +6,25 @@ console.log(sideMessage);
 let firstNumber = Number(document.getElementById('firstNumber').innerHTML);
 let secondNumber = Number(document.getElementById('secondNumber').innerHTML);
 let currentScore = Number(document.getElementById('score').innerHTML);
+let timeleft = Number(document.getElementById('timerCount').innerHTML);
 let newGuess = 1;
 let streakCount = 0;
 let highScore = 0;
 let multiplier = 1;
 let livesRemaining = 3;
-let timeleft = Number(document.getElementById('timerCount').innerHTML);
-let timeRemaining = setInterval(function(){
-  if(timeleft <= 0){
-    clearInterval(timeRemaining);
-    document.getElementById("timerCount").innerHTML = "Game Over!";
-  } else {
-    document.getElementById("timerCount").innerHTML = timeleft + " seconds remaining";
-  }
-  timeleft -= 1;
-}, 6000);
+
+function resetTimer() {
+  let timeRemaining = setInterval(function(){
+    if(timeleft <= 0){
+      clearInterval(timeRemaining);
+      document.getElementById("timerCount").innerHTML = "Game Over!";
+      gameOver();
+    } else {
+      document.getElementById("timerCount").innerHTML = timeleft + " seconds remaining";
+    }
+    timeleft -= 1;
+  }, 6000);
+}
 
 
 function setHighScore(newHigh) {
@@ -124,6 +128,7 @@ function gameOver() {
 
 function resetGame() {
   resetGuess();
+  resetTimer();
   randomizeNumbers();
   fetchHighScore();
   livesRemaining = 3;
