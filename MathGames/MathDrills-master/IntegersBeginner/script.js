@@ -20,7 +20,7 @@ function resetTimer() {
       document.getElementById("timerCount").innerHTML = 0;
       gameOver();
     } else {
-      document.getElementById("timerCount").innerHTML = timeleft + " seconds remaining";
+      document.getElementById("timerCount").innerHTML = timeleft;
     }
     timeleft -= 1;
   }, 1000);
@@ -128,8 +128,9 @@ function gameOver() {
 }
 
 function resetGame() {
-  resetGuess();
+  document.getElementById("timerCount").innerHTML = 60;
   resetTimer();
+  resetGuess();
   randomizeNumbers();
   fetchHighScore();
   livesRemaining = 3;
