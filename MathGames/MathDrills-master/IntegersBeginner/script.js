@@ -6,7 +6,7 @@ console.log(sideMessage);
 let firstNumber = Number(document.getElementById('firstNumber').innerHTML);
 let secondNumber = Number(document.getElementById('secondNumber').innerHTML);
 let currentScore = Number(document.getElementById('score').innerHTML);
-let timeleft = 10;
+let timeleft = Number(document.getElementById('timerCount').innerHTML);
 let newGuess = 1;
 let streakCount = 0;
 let highScore = 0;
@@ -17,7 +17,7 @@ function resetTimer() {
   let timeRemaining = setInterval(function(){
     if(timeleft <= 0){
       clearInterval(timeRemaining);
-      document.getElementById("timerCount").innerHTML = "Game Over!";
+      document.getElementById("timerCount").innerHTML = 0;
       gameOver();
     } else {
       document.getElementById("timerCount").innerHTML = timeleft + " seconds remaining";
