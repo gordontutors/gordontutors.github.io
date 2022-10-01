@@ -142,7 +142,7 @@ function resetGame() {
   setSideMessage('Start guessing...');
   document.querySelector('.check').disabled = false;
   document.querySelector('.guess').disabled = false;
-  document.querySelector('body').style.backgroundColor = #222222;
+  document.querySelector('body').style.backgroundColor = '#222222';
 }
 
 function randomizeNumbers() {
