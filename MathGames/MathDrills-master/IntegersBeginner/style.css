@@ -84,6 +84,12 @@ h1 {
   right: 2rem;
 }
 
+.label-timer {
+  font-size: 2.4rem;
+  position: absolute;
+  top: 2rem;
+}
+
 .again {
   position: absolute;
   top: 2rem;
