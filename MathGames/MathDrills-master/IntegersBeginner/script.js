@@ -11,8 +11,8 @@ let streakCount = 0;
 let highScore = 0;
 let multiplier = 1;
 let livesRemaining = 3;
-let timeleft = 60;
-/*let timeRemaining = setInterval(function(){
+let timeleft = Number(document.getElementById('timerCount').innerHTML);
+let timeRemaining = setInterval(function(){
   if(timeleft <= 0){
     clearInterval(timeRemaining);
     document.getElementById("timerCount").innerHTML = "Game Over!";
@@ -21,7 +21,7 @@ let timeleft = 60;
   }
   timeleft -= 1;
 }, 6000);
-*/
+
 
 function setHighScore(newHigh) {
   document.querySelector('.highscore').textContent = newHigh;
