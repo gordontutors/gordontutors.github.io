@@ -12,7 +12,7 @@ let highScore = 0;
 let multiplier = 1;
 let livesRemaining = 3;
 let timeleft = 60;
-let timeRemaining = setInterval(function(){
+/*let timeRemaining = setInterval(function(){
   if(timeleft <= 0){
     clearInterval(timeRemaining);
     document.getElementById("timerCount").innerHTML = "Game Over!";
@@ -21,6 +21,7 @@ let timeRemaining = setInterval(function(){
   }
   timeleft -= 1;
 }, 6000);
+*/
 
 function setHighScore(newHigh) {
   document.querySelector('.highscore').textContent = newHigh;
