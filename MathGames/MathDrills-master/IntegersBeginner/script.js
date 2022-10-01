@@ -13,20 +13,20 @@ let highScore = 0;
 let multiplier = 1;
 let livesRemaining = 3;
 
-function resetTimer() {
-  let timeRemaining = setInterval(function(){
-    if(timeleft <= 0){
-      clearInterval(timeRemaining);
-      document.getElementById("timerCount").innerHTML = 0;
-      gameOver();
-    } else {
-      document.getElementById("timerCount").innerHTML = timeleft + " seconds remaining";
-    }
-    timeleft -= 1;
-  }, 1000);
-}
+// function resetTimer() {
+//   let timeRemaining = setInterval(function(){
+//     if(timeleft <= 0){
+//       clearInterval(timeRemaining);
+//       document.getElementById("timerCount").innerHTML = 0;
+//       gameOver();
+//     } else {
+//       document.getElementById("timerCount").innerHTML = timeleft + " seconds remaining";
+//     }
+//     timeleft -= 1;
+//   }, 1000);
+// }
 
-resetTimer();
+// resetTimer();
 
 function setHighScore(newHigh) {
   document.querySelector('.highscore').textContent = newHigh;
