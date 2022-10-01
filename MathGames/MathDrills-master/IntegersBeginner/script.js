@@ -26,6 +26,7 @@ function resetTimer() {
   }, 6000);
 }
 
+resetTimer();
 
 function setHighScore(newHigh) {
   document.querySelector('.highscore').textContent = newHigh;
