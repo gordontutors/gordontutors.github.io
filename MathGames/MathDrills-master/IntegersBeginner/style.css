@@ -159,3 +159,17 @@ h1 {
 .deleteCookies:hover {
   background-color: rgb(211, 47, 47);
 }
+
+.bottomleft{
+  font-size: 2rem;
+  color: yellow;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  position:absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#aboutmelink {
+  color: white;
+}
