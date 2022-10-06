@@ -129,6 +129,7 @@ function gameOver() {
 
 function resetGame() {
   timeleft = 30;
+  clearInterval(timeRemaining);
   resetTimer();
   resetGuess();
   randomizeNumbers();
