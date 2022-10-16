@@ -14,7 +14,7 @@ html {
 body {
   font-family: 'Press Start 2P', sans-serif;
   color: #eee;
-  background-color: #222;
+  background-color: #222222;
   /* background-color: #60b347; */
 }
 
@@ -84,6 +84,13 @@ h1 {
   right: 2rem;
 }
 
+.timerlabel {
+  font-size: 1.6rem;
+  position: relative;
+  left: 50%;
+  top: 2rem;
+}
+
 .again {
   position: absolute;
   top: 2rem;
@@ -151,4 +158,18 @@ h1 {
 
 .deleteCookies:hover {
   background-color: rgb(211, 47, 47);
+}
+
+.bottomleft{
+  font-size: 2rem;
+  color: yellow;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  position:absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#aboutmelink {
+  color: white;
 }
