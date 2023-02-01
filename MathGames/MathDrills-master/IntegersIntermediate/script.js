@@ -129,6 +129,7 @@ function resetGame() {
   document.querySelector('.check').disabled = false;
   document.querySelector('.guess').disabled = false;
   document.querySelector('body').style.backgroundColor = 'black';
+  clearTimeout(timerVar);
   timerVar = setTimeout(gameOver,timerTime * 1000);
   timerTextVar = timerTime;
 }
