@@ -6,27 +6,14 @@ console.log(sideMessage);
 let firstNumber = Number(document.getElementById('firstNumber').innerHTML);
 let secondNumber = Number(document.getElementById('secondNumber').innerHTML);
 let currentScore = Number(document.getElementById('score').innerHTML);
-let timeleft = Number(document.getElementById('timerCount').innerHTML);
 let newGuess = 1;
 let streakCount = 0;
 let highScore = 0;
 let multiplier = 1;
 let livesRemaining = 3;
-
-function resetTimer() {
-  let timeRemaining = setInterval(function(){
-    if(timeleft <= 0){
-      clearInterval(timeRemaining);
-      document.getElementById("timerCount").innerHTML = 0;
-      gameOver();
-    } else {
-      document.getElementById("timerCount").innerHTML = timeleft;
-    }
-    timeleft -= 1;
-  }, 1000);
-}
-
-resetTimer();
+let timerVar = -1;
+let timerTextVar = 0;
+let timerTime = 30;
 
 function setHighScore(newHigh) {
   document.querySelector('.highscore').textContent = newHigh;
@@ -38,8 +25,8 @@ function setSideMessage(newMessage) {
 
 function fetchHighScore() {
   if (typeof Storage !== 'undefined') {
-    if (localStorage.highestScore) {
-      highScore = Number(localStorage.highestScore);
+    if (localStorage.highestScoreIntBeg) {
+      highScore = Number(localStorage.highestScoreIntBeg);
       setHighScore(highScore);
       console.log('There is a high score and it is: ' + highScore);
     } else {
@@ -52,7 +39,7 @@ function fetchHighScore() {
   }
 }
 
-fetchHighScore();
+resetGame();
 
 function increaseScore() {
   increaseStreak();
@@ -117,7 +104,7 @@ function gameOver() {
   document.querySelector('body').style.backgroundColor = '#36486b';
   if (currentScore > highScore) {
     document.querySelector('.highscore').textContent = currentScore;
-    localStorage.highestScore = currentScore;
+    localStorage.highestScoreIntBeg = currentScore;
     document.querySelector(
       '.streak-message'
     ).textContent = `NEW HIGH SCORE OF ${currentScore}!!`;
@@ -128,9 +115,6 @@ function gameOver() {
 }
 
 function resetGame() {
-  timeleft = 30;
-  clearInterval(timeRemaining);
-  resetTimer();
   resetGuess();
   randomizeNumbers();
   fetchHighScore();
@@ -144,13 +128,25 @@ function resetGame() {
   setSideMessage('Start guessing...');
   document.querySelector('.check').disabled = false;
   document.querySelector('.guess').disabled = false;
-  document.querySelector('body').style.backgroundColor = '#222222';
+  document.querySelector('body').style.backgroundColor = 'black';
+  clearTimeout(timerVar);
+  timerVar = setTimeout(gameOver,timerTime * 1000);
+  timerTextVar = timerTime;
 }
+
+function timerUpdate(){
+  if(timerTextVar > 0) {
+    timerTextVar--;
+  }
+  document.getElementById("timerText").innerHTML = timerTextVar;
+}
+
+setInterval(timerUpdate,1000);
 
 function randomizeNumbers() {
   //increaseScore();
-  const firstRand = parseInt(Math.random() * 6 + 2);
-  const secondRand = parseInt(Math.random() * 6 + 2);
+  const firstRand = parseInt(Math.random() * 5 + 2);
+  const secondRand = parseInt(Math.random() * 5 + 2);
   document.getElementById('firstNumber').innerHTML = firstRand;
   document.getElementById('secondNumber').innerHTML = secondRand;
   firstNumber = firstRand;
@@ -184,6 +180,6 @@ document.querySelector('.guess').addEventListener('keyup', function () {
 
 document.querySelector('.deleteCookies').addEventListener('click', function () {
   highScore = 0;
-  localStorage.removeItem('highestScore');
+  localStorage.removeItem('highestScoreIntBeg');
   console.log('localStorage Deleted!');
 });
