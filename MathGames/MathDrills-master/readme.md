@@ -6,4 +6,4 @@
 
 <a href="https://gordontutors.github.io/MathGames/MathDrills-master/IntegersAdvanced/">Integers Advanced</a>
 
-<a href="https://gordontutors.github.io/MathGames/MathDrills-master/NegativeIntBeginner/">Negative Integers Beginner</a>
+<a href="https://gordontutors.github.io/MathGames/MathDrills-master/NegativeIntegersBeginner/">Negative Integers Beginner</a>
