@@ -145,8 +145,8 @@ setInterval(timerUpdate,1000);
 
 function randomizeNumbers() {
   //increaseScore();
-  const firstRand = parseInt(Math.random() * 6 + 2);
-  const secondRand = parseInt(Math.random() * 6 + 2);
+  const firstRand = parseInt(Math.random() * 14 - 7);
+  const secondRand = parseInt(Math.random() * 14 - 7);
   document.getElementById('firstNumber').innerHTML = firstRand;
   document.getElementById('secondNumber').innerHTML = secondRand;
   firstNumber = firstRand;
