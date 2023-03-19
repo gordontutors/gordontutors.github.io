@@ -13,7 +13,7 @@ let multiplier = 1;
 let livesRemaining = 3;
 let timerVar = -1;
 let timerTextVar = 0;
-let timerTime = 30;
+let timerTime = 60;
 
 function setHighScore(newHigh) {
   document.querySelector('.highscore').textContent = newHigh;
