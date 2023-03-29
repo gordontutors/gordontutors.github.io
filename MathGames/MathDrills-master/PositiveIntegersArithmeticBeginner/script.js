@@ -149,6 +149,13 @@ function randomizeNumbers() {
   var firstRand = parseInt(Math.random() * 9 +1);
   var secondRand = parseInt(Math.random() * 9 + 1);
   var operationRand = operationArray[Math.floor(Math.random()*operationArray.length)];
+	if operationRand == 'x' {
+		if secondRand > firstRand {
+			var tempRand = secondRand;
+			secondRand = firstRand;
+			firstRand = tempRand;
+		};
+	};
   console.log("The operation is: " + operationRand);
   document.getElementById('firstNumber').innerHTML = firstRand < 0 ? "(" + firstRand + ")" : firstRand;
   document.getElementById('secondNumber').innerHTML = secondRand < 0 ? "(" + secondRand + ")" : secondRand;
