@@ -28,8 +28,8 @@ let operationArray = ['+', '-', 'x'];
 
 function fetchHighScore() {
   if (typeof Storage !== 'undefined') {
-    if (localStorage.highestScoreNegIntArithBeg) {
-      highScore = Number(localStorage.highestScoreNegIntArithBeg);
+    if (localStorage.highestScorePosIntArithBeg) {
+      highScore = Number(localStorage.highestScorePosIntArithBeg);
       setHighScore(highScore);
       console.log('There is a high score and it is: ' + highScore);
     } else {
@@ -105,7 +105,7 @@ function gameOver() {
   document.querySelector('body').style.backgroundColor = '#36486b';
   if (currentScore > highScore) {
     document.querySelector('.highscore').textContent = currentScore;
-    localStorage.highestScoreNegIntArithBeg = currentScore;
+    localStorage.highestScorePosIntArithBeg = currentScore;
     document.querySelector(
       '.streak-message'
     ).textContent = `NEW HIGH SCORE OF ${currentScore}!!`;
@@ -203,7 +203,7 @@ document.querySelector('.guess').addEventListener('keyup', function () {
 
 document.querySelector('.deleteCookies').addEventListener('click', function () {
   highScore = 0;
-  localStorage.removeItem('highestScoreNegIntArithBeg');
+  localStorage.removeItem('highestScorePosIntArithBeg');
   console.log('localStorage Deleted!');
 });
 
