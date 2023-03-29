@@ -149,8 +149,8 @@ function randomizeNumbers() {
   var firstRand = parseInt(Math.random() * 9 +1);
   var secondRand = parseInt(Math.random() * 9 + 1);
   var operationRand = operationArray[Math.floor(Math.random()*operationArray.length)];
-	if operationRand == '-' {
-		if secondRand > firstRand {
+	if (operationRand == '-') {
+		if (secondRand > firstRand) {
 			var tempRand = secondRand;
 			secondRand = firstRand;
 			firstRand = tempRand;
