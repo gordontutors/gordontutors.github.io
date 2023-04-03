@@ -25,8 +25,8 @@ function setSideMessage(newMessage) {
 
 function fetchHighScore() {
   if (typeof Storage !== 'undefined') {
-    if (localStorage.highestScoreIntInter) {
-      highScore = Number(localStorage.highestScoreIntInter);
+    if (localStorage.highestScore6to9) {
+      highScore = Number(localStorage.highestScore6to9);
       setHighScore(highScore);
       console.log('There is a high score and it is: ' + highScore);
     } else {
@@ -104,7 +104,7 @@ function gameOver() {
   document.querySelector('body').style.backgroundColor = '#36486b';
   if (currentScore > highScore) {
     document.querySelector('.highscore').textContent = currentScore;
-    localStorage.highestScoreIntInter = currentScore;
+    localStorage.highestScore6to9 = currentScore;
     document.querySelector(
       '.streak-message'
     ).textContent = `NEW HIGH SCORE OF ${currentScore}!!`;
@@ -180,6 +180,6 @@ document.querySelector('.guess').addEventListener('keyup', function () {
 
 document.querySelector('.deleteCookies').addEventListener('click', function () {
   highScore = 0;
-  localStorage.removeItem('highestScoreIntInter');
+      localStorage.removeItem('highestScore6to9');
   console.log('localStorage Deleted!');
 });
